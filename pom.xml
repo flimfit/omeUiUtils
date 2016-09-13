@@ -11,7 +11,7 @@
 
     <groupId>ome</groupId>
     <artifactId>OMEuiUtils</artifactId>
-    <version>0.1.5-SNAPSHOT</version>
+    <version>0.1.5</version>
 
     <name>OME-ui-utils</name>
     <description>Simple file browser for OMERO</description>
@@ -91,7 +91,7 @@
     <distributionManagement>
       <repository>
         <id>bintray</id>
-        <url>https://api.bintray.com/maven/imperial-photonics/omeUiUtils</url>
+        <url>https://api.bintray.com/imperial-photonics/omeUiUtils/omeUiUtils</url>
       </repository>
     </distributionManagement>
 
