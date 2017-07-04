@@ -181,7 +181,7 @@ public class OMEROImageChooser extends JDialog implements ActionListener {
        
         param.exp(omero.rtypes.rlong(userId));
         paramAll.exp(omero.rtypes.rlong(userId));
-        
+       
         Experimenter exp = session.getAdminService().getExperimenter(userId);
         name = exp.getFirstName().getValue() + " " + exp.getLastName().getValue();
         
@@ -870,8 +870,8 @@ public class OMEROImageChooser extends JDialog implements ActionListener {
               System.out.println("You entered "+pass);
               
               try {
-                //client omeroclient = new client("cell.bioinformatics.ic.ac.uk", 4064);
-                client omeroclient = new client("localhost", 4064);
+                client omeroclient = new client("omero.bioinformatics.ic.ac.uk", 4064);
+                //client omeroclient = new client("localhost", 4064);
                 //client omeroclient = new client("demo.openmicroscopy.org", 4064);
                 
 
