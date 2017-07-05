@@ -884,22 +884,22 @@ public class OMEROImageChooser extends JDialog implements ActionListener {
                   //OMEROImageChooser chooser = new OMEROImageChooser(omeroclient, uId, new Long(4477));
                   String[] strings = {"","filename",".xml"};
                   int type = 1;
-                  OMEROImageChooser chooser = new OMEROImageChooser(omeroclient, uId , new  Long(51), strings);
+                  OMEROImageChooser chooser = new OMEROImageChooser(omeroclient, uId , true);
                   
                 
-                 Dataset returned = chooser.getSelectedDataset();
+                 //Dataset returned = chooser.getSelectedDataset();
                 // Plate returned = chooser.getSelectedPlate();
                 //  OriginalFile returnedFile = chooser.getSelectedFile();
                  
-                 if (returned != null)  {
+                 /*if (returned != null)  {
                   System.out.println(returned.getName().getValue());
                   System.out.println(chooser.getFilename() );
-                 } 
+                 } */
                  
-                 /*Image[] returned = chooser.getSelectedImages();
+                 Image[] returned = chooser.getSelectedImages();
                   for (int i = 0; i < returned.length; i++) {
                     System.out.println(returned[i].getName().getValue());
-                  }  */
+                  }  
                 
                   System.out.println("closing down");
                      
