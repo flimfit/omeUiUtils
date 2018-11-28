@@ -6,32 +6,69 @@
     <parent>
         <groupId>ome</groupId>
         <artifactId>pom-omero-client</artifactId>
-        <version>5.2.6</version>
+        <version>5.4.9</version>
     </parent>
 
     <groupId>ome</groupId>
     <artifactId>OMEuiUtils</artifactId>
-    <version>0.1.5</version>
+    <version>0.1.7</version>
 
     <name>OME-ui-utils</name>
     <description>Simple file browser for OMERO</description>
 
-    <dependencies>
+ <dependencies>
         <dependency>
           <groupId>omero</groupId>
           <artifactId>blitz</artifactId>
         </dependency>
         <dependency>
           <groupId>ome</groupId>
-          <artifactId>bioformats_package</artifactId>
-          <version>5.1.8</version>
+          <artifactId>formats-bsd</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>ome</groupId>
+          <artifactId>formats-gpl</artifactId>
         </dependency>
     </dependencies>
-
+    <profiles>
+    <profile>
+      <id>ice35</id>
+      <activation>
+        <property>
+          <name>!ice</name>
+        </property>
+      </activation>
+      <properties>
+        <ice.version>ice35</ice.version>
+      </properties>
+    </profile>
+    <profile>
+      <id>ice36</id>
+      <activation>
+        <property>
+          <name>ice</name>
+          <value>36</value>
+        </property>
+      </activation>
+      <properties>
+        <ice.version>ice36</ice.version>
+      </properties>
+    </profile>
+  </profiles>
     <repositories>
         <repository>
           <id>ome.maven</id>
           <url>http://artifacts.openmicroscopy.org/artifactory/maven/</url>
+        </repository>
+        <repository>
+          <id>unidata-releases</id>
+          <name>unidata-releases</name>
+          <url>https://artifacts.unidata.ucar.edu/content/repositories/unidata-releases</url>
+        </repository>
+        <repository>
+          <id>zeroc</id>
+          <name>zeroc</name>
+          <url>https://repo.zeroc.com/nexus/content/repositories/releases/</url>
         </repository>
     </repositories>
 
