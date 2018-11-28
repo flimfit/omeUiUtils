@@ -80,7 +80,7 @@
             <execution>
               <id>attach-javadocs</id>
               <goals>
-                <goal>doc</goal>
+                <goal>javadoc</goal>
               </goals>
             </execution>
           </executions>
