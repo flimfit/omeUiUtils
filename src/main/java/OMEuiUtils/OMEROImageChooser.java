@@ -871,8 +871,8 @@ public class OMEROImageChooser extends JDialog implements ActionListener {
               
               try {
                 //client omeroclient = new client("cell.bioinformatics.ic.ac.uk", 4064);
-                client omeroclient = new client("localhost", 4064);
-                //client omeroclient = new client("demo.openmicroscopy.org", 4064);
+                //client omeroclient = new client("localhost", 4064);
+                client omeroclient = new client("demo.openmicroscopy.org", 4064);
                 
 
                 ServiceFactoryPrx session = omeroclient.createSession("imunro", pass);
